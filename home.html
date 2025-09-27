@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mugiwara Clan</title>
+  <link rel="stylesheet" href="assets/css/hstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+    <header>
+        <img alt="Clan Logo" class="clan-logo" id="clanBadge">
+
+        <div class="clan-header-text">
+            <h1>The Mugiwara</h1>
+            <p>Founded: December 2020</p>
+            
+        </div>
+        <button class="Join-btn">
+          <a class="join-link" href="https://link.clashofclans.com/?action=OpenClanProfile&tag=2L0QRVR2V" target="_blank">
+          </a>
+          <img class="join-img" src="assets/bar.png">
+
+          <span class="join-us">Join us</span>
+          <span class="now">Now</span>
+        </button>
+
+        <nav class="navbar">
+            <a class="navHead" href="home.html">Home</a> 
+            <a class="navHead" href="members.html">Members</a> 
+            <a class="navHead" href="rules.html">Rules</a>
+        </nav>
+
+        <div class="LogoCoc">
+            <img src="assets/coc_logo.png" alt="Clash of Clans Logo">
+        </div>
+
+    </header>
+
+
+  <main><br>
+    <!-- ABOUT SECTION -->
+
+        <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-target="tab-clan">Clan</button>
+      <button class="tab-btn" data-target="tab-stats">Stats</button>
+    </div>
+
+    <section class="clan-card  tab-panel" id="tab-clan">
+      <div class="clan-left">
+        <h2>The Mugiwara</h2>
+        <p class="tag">#2L00RVR2V</p>
+        <p class="desc">
+          Yo! Wanna join the Strawhats? Sure thing — <br>
+          welcome aboard the ship! Just 
+          follow the rules and enjoy the journey <br>
+          
+        </p><br>
+        <div class="labels-clan">
+          <div class="label1"><img src="https://api-assets.clashofclans.com/labels/64/ZxJp9606Vl1sa0GHg5JmGp8TdHS4l0jE4WFuil1ENvA.png"></div>
+          <div class="label2"><img src="https://api-assets.clashofclans.com/labels/64/hM7SHnN0x7syFa-s6fE7LzeO5yWG2sfFpZUHuzgMwQg.png"></div>
+          <div class="label3"><img src="https://api-assets.clashofclans.com/labels/64/DhBE-1SSnrZQtsfjVHyNW-BTBWMc8Zoo34MNRCNiRsA.png"></div>
+        </div>
+      </div>
+      
+      <div class="clan-mid"></div>
+
+      <div class="clan-right">
+        <div>
+        <p><strong>Clan War League:</strong>          </p>
+        <p><strong>Total Points:</strong>             </p>
+        <p><strong>Clan Location:</strong>            </p>
+        <p><strong>Chat Language:</strong>            </p>
+        <p><strong>Type:</strong>                     </p>
+        <p><strong>Required Trophies:</strong>        </p>
+        <p><strong>Required Town Hall:</strong>       </p>
+        </div>
+
+        <div>
+          <p><span id="clanLeague"></span></p>
+          <p><span id="totalPoints"></span></p>
+          <p><span id="clanLocation"></span></p>
+          <p><span id="chatLanguage"></span></p>
+          <p><span id="clanType"></span></p>
+          <p><span id="requiredTrophies"></span></p>
+          <p><span id="requiredTH"></span></p>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Stats -->
+
+    <section class="stats clan-card tab-panel" id="tab-stats" style="display:none;">
+    <!-- Clan Performance Stats -->
+      <div class="clan-stats">
+        <div>
+          <p><strong>Wars Played:</strong></p>
+          <p><strong>Wars Won:</strong></p>
+          <p><strong>War Win Streak:</strong></p>
+          <p><strong>Clan Leader:</strong></p>
+          <p><strong>War Frequency:</strong></p>
+        </div>
+
+        <div>
+          <p><span id="warsPlayed"></span></p>
+          <p><span id="warsWon"></span></p>
+          <p><span id="warWinStreak"></span></p>
+          <p><span id="clanLeader"></span></p>
+          <p><span id="warFrequency"></span></p>
+        </div>
+      </div>
+
+      <!-- Separator -->
+      <div class="clan-mid"></div>
+
+      <!-- Clan Capital Stats -->
+      <div class="clan-stats">
+        <div>
+          <p><strong>Capital Hall Level:</strong></p>
+          <p><strong>Capital Upgrades:</strong></p>
+          <p><strong>Raid Logs:</strong></p>
+          <p><strong>Capital League:</strong></p>
+          <p><strong>Capital Trophies:</strong></p>
+
+        </div>
+
+        <div>
+          <p><span id="capitalHall"></span></p>
+          <p><span id="capitalUpgrades"></span></p>
+          <p><span id="raidLogs"></span></p>
+          <p><span id="capitalLeague"></span></p>
+          <p><span id="capitalTrophies"></span></p>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+          <!-- Tabs -->
+    <div class="tabs1">
+      <button class="tab-btn1 active" data-target="tab-war">Current War</button>
+      <button class="tab-btn1" data-target="tab-raid">Current Raid</button>
+    </div>
+
+    <section class="current-war tab-panel1" id="tab-war">
+      <h2>⚔️ Current War ⚔️</h2>
+
+      <!-- War Info -->
+      <div class="war-info">
+        <p><strong>State :</strong> <span id="war-state"></span></p>
+        <p><strong>Team Size :</strong> <span id="team-size"></span></p>
+        <p><strong>Time :</strong> <span id="time-remaining"></span></p>
+      </div>
+
+      <!-- Clans Comparison -->
+      <div class="clans">
+        <!-- My Clan -->
+        <div class="clan-card1 mine">
+          <img
+              alt="My Clan Badge" class="clan-badge">
+          <h3 id="my-clan-name"></h3>
+          <p>Stars : <span id="my-stars"></span></p>
+          <p>Destruction : <span id="my-destruction"></span></p>
+          <p>Clan Level : <span id="M-level"></span></p>
+
+        </div>
+
+        <span class="vs">VS</span>
+
+        <!-- Opponent Clan -->
+        <div class="clan-card1 opponent">
+          <img  
+              alt="Opponent Badge" class="clan-badge">
+          <h3 id="opponent-name"></h3>
+          <p>Stars : <span id="opponent-stars"></span></p>
+          <p>Destruction : <span id="opponent-destruction"></span></p>
+          <p>Clan Level : <span id="opponent-level"></span></p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+      <section class="current-raid  tab-panel1" id="tab-raid" style="display:none;">
+      <h2>⚔️ Current Capital Raid ⚔️</h2>
+
+      <!-- Raid Info -->
+      <div class="raid-info">
+        <p><strong>State :</strong> <span id="raid-state"></span></p>
+        <p><strong>Time :</strong> <span id="time-remaining1"></span></p>
+      </div>
+
+      <div class="clans">
+        <!-- My Clan -->
+        <div class="clan-card1 mine">
+          <img
+              src="https://api-assets.clashofclans.com/badges/200/ye6xXflh8eRy0alyAeTX0BQ0BMeZzORHitC9Ac6Tito.png"
+              alt="My Clan Badge" class="clan-badge">
+          <h3 id="my-clan-name"></h3>
+          <p>Number of Attacks : <span id="totalAttacks"></span></p>
+          <p>Clans Defeated : <span id="raidsCompleted"></span></p>
+          <p>Capital total Loot : <span id="capitalTotalLoot"></span></p>
+          <p>Rewards : <span id="rewards"></span></p>
+          <p>Best Attacker :<span id="best-attacker"></span></p>
+
+
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+ 
+
+    <!-- RECRUIT -->
+    <section class="recruit">
+        <h2>Join The Mugiwara!</h2>
+        <p>Want to become part of our crew? Click the button below to apply.</p>
+        <button id="recruit-btn">Apply Now</button>
+    </section>
+    <br>
+  </main>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 The Mugiwara Clan | All rights reserved</p>
+  </footer>
+
+  <script src="assets/js/hscript.js"></script>
+  <script src="config.js"></script>
+
+</body>
+</html>
